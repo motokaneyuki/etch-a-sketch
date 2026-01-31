@@ -28,3 +28,13 @@
 .mouseover {
     background-color: pink;
 }
+
+.newGrid {
+    background-color: pink;
+    padding: 5px 10px;
+}
+
+h1 {
+    text-decoration-line: underline;
+    text-decoration-color: pink;
+}
