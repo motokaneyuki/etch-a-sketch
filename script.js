@@ -1,5 +1,7 @@
 const container = document.querySelector('.container');
 const newGridButton = document.querySelector('.newGrid');
+const solidButton = document.querySelector('.solidButton');
+const funButton = document.querySelector('.funButton');
 
 let size = 16;
 let gridSize = 600 / size; 
@@ -12,11 +14,25 @@ function etchASketch(size) {
         grid.classList.add('grid');
         grid.style.width = `${gridSize}px`;
         container.appendChild(grid);
+        
+        funButton.addEventListener('click', () => {
+            grid.classList.add('fun');
+        })
+
+        solidButton.addEventListener('click', () => {
+         grid.classList.remove('fun');
+        })
 
         grid.addEventListener('mouseover', () => {
-            grid.classList.add('mouseover');
-            let currentOpacity = Number(grid.style.opacity);
-            grid.style.opacity = currentOpacity + 0.1;
+            if (grid.classList.contains('fun')){
+                grid.classList.add('mouseover');
+                let currentOpacity = Number(grid.style.opacity);
+                grid.style.opacity = currentOpacity + 0.1;
+            } else {
+                grid.classList.add('mouseover');
+                let currentOpacity = Number(grid.style.opacity);
+                grid.style.opacity = currentOpacity + 1;
+            }   
         })
     }
 }

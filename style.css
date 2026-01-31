@@ -27,13 +27,27 @@
     opacity: 0.1;
 }
 
+.fun {
+    opacity: 0.1;
+}
+
 .mouseover {
     background-color: pink;
 }
 
-.newGrid {
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.buttonStyle {
     background-color: pink;
     padding: 5px 10px;
+}
+
+.buttonStyle:hover {
+    background-color: aliceblue;
+    cursor: pointer;
 }
 
 h1 {
