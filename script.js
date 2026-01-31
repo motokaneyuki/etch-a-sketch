@@ -21,9 +21,13 @@ function etchASketch(size) {
 
 newGridButton.addEventListener('click', () => {
     container.textContent = '';
-    let result = Number(prompt('What grid size would you like? (from 1 to 100)', '10'));
-    size = result;
-    gridSize = 600 / result;
-    
-    etchASketch(size);
+    let result = Number(prompt('What grid size would you like? (from 1 to 100)', '16'));
+    if (result <= 100) {
+        size = result;
+        gridSize = 600 / result;
+        etchASketch(size);
+    } else {
+        alert('Maximum is 100. Please try again.');
+    }
+
 })
