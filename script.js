@@ -15,6 +15,8 @@ function etchASketch(size) {
 
         grid.addEventListener('mouseover', () => {
             grid.classList.add('mouseover');
+            let currentOpacity = Number(grid.style.opacity);
+            grid.style.opacity = currentOpacity + 0.1;
         })
     }
 }
