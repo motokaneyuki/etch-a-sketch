@@ -28,7 +28,7 @@ function etchASketch(size) {
         container.addEventListener('mouseup', () => {mouseDown = false})
         
         
-        grid.addEventListener('mousemove', () => {
+        grid.addEventListener('mouseover', () => {
             if (mouseDown) {
                 if (grid.classList.contains('fun')){
                     grid.classList.add('color');
