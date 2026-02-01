@@ -23,17 +23,24 @@ function etchASketch(size) {
          grid.classList.remove('fun');
         })
 
-        grid.addEventListener('mouseover', () => {
-            if (grid.classList.contains('fun')){
-                grid.classList.add('mouseover');
-                let currentOpacity = Number(grid.style.opacity);
-                grid.style.opacity = currentOpacity + 0.1;
-            } else {
-                grid.classList.add('mouseover');
-                let currentOpacity = Number(grid.style.opacity);
-                grid.style.opacity = currentOpacity + 1;
-            }   
-        })
+        let mouseDown = false;
+        window.addEventListener('mousedown', () => {mouseDown = true})
+        window.addEventListener('mouseup', () => {mouseDown = false})
+        
+        
+        grid.addEventListener('mousemove', () => {
+            if (mouseDown) {
+                if (grid.classList.contains('fun')){
+                    grid.classList.add('mouseover');
+                    let currentOpacity = Number(grid.style.opacity);
+                    grid.style.opacity = currentOpacity + 0.1;
+                } else {
+                    grid.classList.add('mouseover');
+                    let currentOpacity = Number(grid.style.opacity);
+                    grid.style.opacity = currentOpacity + 1;
+                }   
+            }
+        }) 
     }
 }
 
