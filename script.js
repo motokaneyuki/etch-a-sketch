@@ -31,11 +31,11 @@ function etchASketch(size) {
         grid.addEventListener('mousemove', () => {
             if (mouseDown) {
                 if (grid.classList.contains('fun')){
-                    grid.classList.add('mouseover');
+                    grid.classList.add('color');
                     let currentOpacity = Number(grid.style.opacity);
                     grid.style.opacity = currentOpacity + 0.1;
                 } else {
-                    grid.classList.add('mouseover');
+                    grid.classList.add('color');
                     let currentOpacity = Number(grid.style.opacity);
                     grid.style.opacity = currentOpacity + 1;
                 }   
