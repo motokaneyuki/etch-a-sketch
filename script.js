@@ -24,8 +24,8 @@ function etchASketch(size) {
         })
 
         let mouseDown = false;
-        window.addEventListener('mousedown', () => {mouseDown = true})
-        window.addEventListener('mouseup', () => {mouseDown = false})
+        container.addEventListener('mousedown', () => {mouseDown = true})
+        container.addEventListener('mouseup', () => {mouseDown = false})
         
         
         grid.addEventListener('mousemove', () => {
