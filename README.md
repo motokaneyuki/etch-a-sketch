@@ -5,7 +5,7 @@ Live preview can be found <a href="https://motokaneyuki.github.io/etch-a-sketch/
 This is an Etch a Sketch pad where you can click and drag your mouse to add color to each grid making it look like you are drawing.
 
 # How to use
-CLick and drag your mouse over the grid to add color.
+Click and drag your mouse over the grid to add color.
 
 The default color is a solid pink but it is possible to do gradient colors of pink that darkens in opacity each time you go through it when you select the Gradient Color button. Reverse back to the solid color by clicking the Solid Color button.
 
